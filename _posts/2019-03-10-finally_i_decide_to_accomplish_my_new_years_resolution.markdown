@@ -1,6 +1,6 @@
 ---
 layout: post
-title:      "defining my prime number methods and compare them "
+title:      "Defining my prime number methods and compare them "
 date:       2019-03-10 03:54:35 -0400
 permalink:  finally_i_decide_to_accomplish_my_new_years_resolution
 ---
@@ -73,7 +73,7 @@ if number<2||number==4
 	 
 ```
 
-Ok, so I test it and this method is fine too. And here is how I test if I am right about the prime2 method is faster than the prime1, which is faster than prime0. I use the Benchmark#bm method to help me, after reading this article from Jesse Storimer (http://rubylearning.com/blog/2013/06/19/how-do-i-benchmark-ruby-code/). So basically, I simply define 3 methods to check prime numbers within [2,10000] and then use the #bm method to generate reports side by side, showing me how fast each method will take and thus easier to compare which is more efficient. Here are my codes：
+Ok, so I test it and this method is fine too. And here is how I test if I am right about the prime2 method is faster than the prime1, which is faster than prime0. I use the Benchmark#bm method to help me, after reading this article from Jesse Storimer [(http://rubylearning.com/blog/2013/06/19/how-do-i-benchmark-ruby-code/)](http://). So basically, I simply define 3 methods to check prime numbers within [2,10000] and then use the #bm method to generate reports side by side, showing me how fast each method will take and thus easier to compare which is more efficient. Here are my codes：
 
 ```
 def checkprime0
