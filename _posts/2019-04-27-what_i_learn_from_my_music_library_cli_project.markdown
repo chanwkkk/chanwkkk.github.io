@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "What I learn from my Music Library CLI project"
-date:       2019-04-27 07:18:57 +0000
+date:       2019-04-27 03:18:58 -0400
 permalink:  what_i_learn_from_my_music_library_cli_project
 ---
 
@@ -87,7 +87,7 @@ Now it works, finally. Because if the value we assigned is  an object from nil c
 > 		
 >   end
 
-it ran ok until it hit the  `#list_songs`method , which was designed to print all songs in the music library in a numbered list (alphabetized by song name)`. I thought I could get it done by `sort` ing the names of the songs in @@songs, the array that stores all the songs that have been made. But it fails. After I used "pry" to dig into it for quite a bit, I found that I have many identical song objects pushed in `@@songs`.  Since there are so many chain methods woven together that I cannot really find out which one contributes to which identical songs exactly, I decided to go back to `save` and wrote the following codes:
+It ran ok until it hit the  `#list_songs` method , which was designed to print all songs in the music library in a numbered list (alphabetized by song name). I thought I could get it done by `sort` ing the names of the songs in @@songs, the array that stores all the songs that have been made. But it fails. After I used "pry" to dig into it for quite a bit, I found that I have many identical song objects pushed in `@@songs`.  Since there are so many chain methods woven together that I cannot really find out which one contributes to which identical songs exactly, I decided to go back to `save` and wrote the following codes:
 
 > def save
 > 
