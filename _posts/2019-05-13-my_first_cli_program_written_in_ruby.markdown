@@ -80,11 +80,30 @@ Also, I love encapsulation when I need ending! Look at my codes and you will fin
 
 You see, I need those because when I check the validation of user input, if users give me a bad input, I should be able to restart the whole process. How can I do that? I just call that method within that method! That is much simpler than `#while` or other roundabouts.  
 
-**3. saving  work by using instance variable**
+**3. Saving  work by using instance variable**
 
 The last but not least thing I learn from the project is to make a variable instance variable if you have to keep using it. I do that when I have to deal with the method `#list_centers`.  If you remember, that method is made for showing a list according to a zip code that user inputs within `#call`method. In this step, I can easily pass a zip code(the input) to `#list_centers` since it is in `#call` too. But I expect after users choose a center from the list and know more about it, they get another chance to see the list and pick another center from it. That means, I have to do the `list_centers` again. But how am I supposed to re-get a zip code as its argumet?Should I ask the user again? 
 
 No. I don't have to. All I need is storing the input as an instance variable called `@zip`. Anytime I need it, I just use it, and don't have to worry about asking for zip codes again and again. Therefore, it works but an argument need not to be passed. 
+
+**Extra notes**
+
+Last but not least, I want to list some of my notes here. It might look very small, but that does cause my headache, and I hope that I won't make those mistakes again!
+*    When using `require_relative`, you have to use a relative path instead of an absolute one. It is absolute to  to the current file you are writing codes on, not to which directory you are in right now. To require an document in another directory, if I want to going up one directory, I need to use `../`, for example, if I am writing a`bin/exec.rb` and require a `lib/hello.rb`, I should put it like this : `require_relative '../lib/`. But if I want to go one more up, I should write `../../documents` instead of `.../`. For requiring documents in the same directory, using `./`. 
+*    When setting up the models that I need, I have two choices to define classes: 
+>  class Top10LocalDayCareCenters::Cli
+>        ...
+> 	end
+	
+	or
+	
+> 	  module Top10LocalDayCareCenters
+> 	       class Cli
+> 			 
+> 			   end
+> 	   end
+  
+Either one is fine, but I just found that if I choose the first one, when I refer to other classes in the same directory and under the same module, I need to do this: `Top10LocalDayCareCenters::Scraper`, while in the second one, I can call on class `Scraper` directly. 
 
 
 ***The end***
