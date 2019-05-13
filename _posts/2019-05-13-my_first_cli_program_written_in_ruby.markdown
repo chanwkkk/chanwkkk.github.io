@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "My first CLI program written in Ruby "
-date:       2019-05-13 08:09:42 +0000
+date:       2019-05-13 04:09:43 -0400
 permalink:  my_first_cli_program_written_in_ruby
 ---
 
@@ -87,7 +87,7 @@ The last but not least thing I learn from the project is to make a variable inst
 No. I don't have to. All I need is storing the input as an instance variable called `@zip`. Anytime I need it, I just use it, and don't have to worry about asking for zip codes again and again. Therefore, it works but an argument need not to be passed. 
 
 
-**The end**
+***The end***
 
 Ok, so here is all I want to talk about so far. I am still working on my project, so maybe later on when I learn more, I will post it here! Again, if you have any advice for me, please don't hesitate to email me:  chanwingkeihaha@gmail.com. Thanks for reading all of this! 
 
