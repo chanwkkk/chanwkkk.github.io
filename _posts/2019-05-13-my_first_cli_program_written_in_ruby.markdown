@@ -62,19 +62,31 @@ I tried really hard to avoid repeating myself and use encapsulation more. They a
 
 Also, I love encapsulation when I need ending! Look at my codes and you will find two methods for ending here. Here is one example: 
 
+> >
 > def ending
 > 
->     puts "Do you want to re-enter a zip code? [Y/N]"
->     input=gets.strip
->     while !["Y","N"].include?(input.upcase)
->      puts "Wrong input!"
->      puts "Give me only 'Y' or 'N' please."
->      ending
->     end
->      if input.upcase=="Y"
->      call
->      else
->      end
+> puts "Do you want to re-enter a zip code? [Y/N]"
+> 
+> input=gets.strip
+> 
+> while !["Y","N"].include?(input.upcase)
+> 
+> puts "Wrong input!"
+> 
+> puts "Give me only 'Y' or 'N' please."
+> 
+> ending
+> 
+> end
+> 
+> if input.upcase=="Y"
+> 
+> call
+> 
+> else
+> 
+> end
+> 
 > end
 > 
 
@@ -91,15 +103,18 @@ No. I don't have to. All I need is storing the input as an instance variable cal
 Last but not least, I want to list some of my notes here. It might look very small, but that does cause my headache, and I hope that I won't make those mistakes again!
 *    When using `require_relative`, you have to use a relative path instead of an absolute one. It is absolute to  to the current file you are writing codes on, not to which directory you are in right now. To require an document in another directory, if I want to going up one directory, I need to use `../`, for example, if I am writing a`bin/exec.rb` and require a `lib/hello.rb`, I should put it like this : `require_relative '../lib/`. But if I want to go one more up, I should write `../../documents` instead of `.../`. For requiring documents in the same directory, using `./`. 
 *    When setting up the models that I need, I have two choices to define classes: 
->  class Top10LocalDayCareCenters::Cli
->        ...
+>  
+> class Top10LocalDayCareCenters::Cli
+>
+> ...
 > 	end
 	
-	or
+Or
+
 	
 > 	  module Top10LocalDayCareCenters
 > 	       class Cli
-> 			 
+> 			      ...
 > 			   end
 > 	   end
   
