@@ -63,32 +63,20 @@ I tried really hard to avoid repeating myself and use encapsulation more. They a
 Also, I love encapsulation when I need ending! Look at my codes and you will find two methods for ending here. Here is one example: 
 
 > >
-> def ending
+> >   def ending
 > 
-> puts "Do you want to re-enter a zip code? [Y/N]"
-> 
-> input=gets.strip
-> 
-> while !["Y","N"].include?(input.upcase)
-> 
-> puts "Wrong input!"
-> 
-> puts "Give me only 'Y' or 'N' please."
-> 
-> ending
-> 
-> end
-> 
-> if input.upcase=="Y"
-> 
-> call
-> 
-> else
-> 
-> end
-> 
-> end
-> 
+>     puts "Do you want to re-enter a zip code? [Y/N]"
+>     input=gets.strip
+>    
+>     if input.upcase=="Y"
+>          call
+>       elsif input.upcase=="N"
+>       else
+>      puts "Wrong input!"
+>      puts "Give me only 'Y' or 'N' please."
+>      ending
+>     end
+>    end
 
 You see, I need those because when I check the validation of user input, if users give me a bad input, I should be able to restart the whole process. How can I do that? I just call that method within that method! That is much simpler than `#while` or other roundabouts.  
 
