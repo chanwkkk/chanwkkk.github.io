@@ -26,7 +26,7 @@ As I know, some APIs you can use without any kind of authentication, but most of
 
 There are a lot when I look it up online: httparty, faraday, http, etc, tools which  you will pass parameters and the link that you get from the base software to and get response from. Then you might get some JSONs, which you will have to parse before finding and using datas. 
 
-***3. An example: How to use Yelp API for my ruby program? ***
+***3. An example: How to use Yelp API for my ruby program?***
 
 Ok, now I will explain how I use Yelp API to get information I want. 
 
