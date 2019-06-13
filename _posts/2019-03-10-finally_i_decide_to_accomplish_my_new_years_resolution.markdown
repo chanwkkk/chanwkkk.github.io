@@ -1,6 +1,6 @@
 ---
 layout: post
-title:      "Defining My Prime Number Methods and Compare them "
+title:      "Defining My Prime Number Methods and Compare them        "
 date:       2019-03-10 03:54:35 -0400
 permalink:  finally_i_decide_to_accomplish_my_new_years_resolution
 ---
@@ -18,7 +18,7 @@ def prime0?(number)
        if number%i==0
          return false
       end
-     i=i+1
+     i=i+1  
    end
    true
  end
