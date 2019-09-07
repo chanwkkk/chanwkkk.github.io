@@ -92,7 +92,7 @@ Last but not least, I want to talk about helper methods. Sometimes we need to wr
 In my app, I need two helpers methods: `current_user` and `log_in?`. I need to use them quite often to  verify the user or if they already log in before a review is created or edited. I try two different ways to use helper methods this time in my app and they have their own pros and cons.
 
 
-*** put it in `helper.rb` in `models` directory***
+***put it in `helper.rb` in `models` directory***
 
 One of the choices is to give the methods their own home! Since they don't belong to any models, I create a new file called `helper.rb`, and then write both methods there within class `Helper`. Since we will not instantiate any Helper instances because we only want to use methods there, we will write all the methods as class methods instead of instance methods. Here are my codes:
 
@@ -114,13 +114,12 @@ end
 
 Next time when I try to use these methods, I will just do `Helper.current_user(session)` or `Helper.log_in?(session)`, which also makes reading codes easier.
   
-*** put it in the `applicationcontroller.rb` under `controllers` directory * **
+***put it in the `applicationcontroller.rb` under `controllers` directory***
 
 The second way is leave it in the controller document. Within class `ApplicationController`, on the very bottom, we can add these following codes:
 
 ```
   helpers do
-
       def current_user
         User.find_by :id=>session[:user_id]
       end
@@ -128,8 +127,7 @@ The second way is leave it in the controller document. Within class `Application
       def log_in?
         !!session[:user_id]
       end
-
-  end
+	end
 	```
 And when we want to use these methods, I just put `current_user` or `log_in?`, then they will be called right away. 
 
