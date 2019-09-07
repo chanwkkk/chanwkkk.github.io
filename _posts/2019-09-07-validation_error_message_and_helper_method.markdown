@@ -114,7 +114,7 @@ end
 
 Next time when I try to use these methods, I will just do `Helper.current_user(session)` or `Helper.log_in?(session)`, which also makes reading codes easier.
   
-*** *put it in the `applicationcontroller.rb` under `controllers` directory* *** 
+*** put it in the `applicationcontroller.rb` under `controllers` directory * **
 
 The second way is leave it in the controller document. Within class `ApplicationController`, on the very bottom, we can add these following codes:
 
