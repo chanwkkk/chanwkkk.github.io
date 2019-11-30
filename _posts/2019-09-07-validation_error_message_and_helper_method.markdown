@@ -128,6 +128,7 @@ The second way is leave it in the controller document. Within class `Application
         !!session[:user_id]
       end
 	end
+	
 	```
 And when we want to use these methods, I just put `current_user` or `log_in?`, then they will be called right away. 
 
