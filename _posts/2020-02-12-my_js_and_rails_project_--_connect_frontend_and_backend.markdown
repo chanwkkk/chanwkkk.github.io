@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "My js and rails project -- connect frontend and backend"
-date:       2020-02-12 21:36:31 +0000
+date:       2020-02-12 16:36:32 -0500
 permalink:  my_js_and_rails_project_--_connect_frontend_and_backend
 ---
 
