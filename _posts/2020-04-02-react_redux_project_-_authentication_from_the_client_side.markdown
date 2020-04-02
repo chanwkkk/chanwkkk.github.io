@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      " React Redux Project - Authentication from the client side"
-date:       2020-04-02 23:12:48 +0000
+date:       2020-04-02 19:12:49 -0400
 permalink:  react_redux_project_-_authentication_from_the_client_side
 ---
 
